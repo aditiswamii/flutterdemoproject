@@ -5,11 +5,11 @@ import 'package:location/location.dart';
 
 
 void main() {
-  runApp(const MyApp());
+  runApp(const MyMapScreen());
 }
 
-class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+class MyMapScreen extends StatelessWidget {
+  const MyMapScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
@@ -39,8 +39,8 @@ class _MapScreenState extends State<MapScreen> {
         target: LatLng(loc.latitude ?? 0.0,loc.longitude?? 0.0),
         zoom: 12.0,
       )));
-      print(loc.latitude);
-      print(loc.longitude);
+      print(loc.latitude);//current latitude
+      print(loc.longitude);//current longitude
       setState(() {
         _markers.add(Marker(markerId: MarkerId('Home'),
             position: LatLng(loc.latitude ?? 0.0, loc.longitude ?? 0.0)
@@ -69,7 +69,7 @@ class _MapScreenState extends State<MapScreen> {
         child:GoogleMap(
           zoomControlsEnabled: false,
           initialCameraPosition:CameraPosition(
-            target: LatLng(48.8561, 2.2930),
+            target: LatLng(28.8561, 28.2930),
             zoom: 12.0,
           ),
           onMapCreated: (GoogleMapController controller){

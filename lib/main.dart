@@ -1,5 +1,7 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
+import 'package:flutterdemoproject/getlocation/mapscreen.dart';
+import 'package:flutterdemoproject/searchplacemap/searchplacesonmap.dart';
 import 'maplocation/maplocation.dart';
 
 void main() {
@@ -14,7 +16,7 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      home: const MyHomePage(),
+      home:  MySearchPlacesMap(),
     );
   }
 }
@@ -40,11 +42,11 @@ class _MyHomePageState extends State<MyHomePage> {
   @override
   void initState() {
     super.initState();
-    Timer(
-    const Duration(seconds: 3),
-        () => Navigator.of(context).pushReplacement(MaterialPageRoute(
-        builder: (BuildContext context) => MyLocationMap()))
-        );
+    // Timer(
+    // const Duration(seconds: 3),
+    //     () => Navigator.of(context).pushReplacement(MaterialPageRoute(
+    //     builder: (BuildContext context) => MyLocationMap()))
+    //     );
   }
 
   @override
