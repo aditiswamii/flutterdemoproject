@@ -39,6 +39,8 @@ dependencies:
   geocoding: ^2.0.0
   flutter_polyline_points: ^1.0.0
   location: ^4.3.0
+  shared_preferences:
+  shared_preferences_android:
 dev_dependencies:
   flutter_test:
     sdk: flutter
