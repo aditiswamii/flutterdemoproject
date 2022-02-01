@@ -7,6 +7,7 @@ class MyStateless extends StatelessWidget { //cannot change values in runtime
   Widget build(BuildContext context) {
     return MaterialApp(
         title: 'Flutter Demo',
+        debugShowCheckedModeBanner: false,
         theme: ThemeData(
           primarySwatch: Colors.blue,
         ),
