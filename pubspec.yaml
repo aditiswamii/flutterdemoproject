@@ -42,6 +42,9 @@ dependencies:
   shared_preferences:
   shared_preferences_android:
   floor:
+  firebase_analytics:
+  firebase_messaging:
+  firebase_core:
 
 
 dev_dependencies:
